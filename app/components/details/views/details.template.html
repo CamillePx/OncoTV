@@ -1,0 +1,13 @@
+<div class="movie--detail cf">
+    <div class="image--container">
+        <img class="movie--image" ng-src="https://image.tmdb.org/t/p/w500/{{detail.poster_path}}" alt="{{detail.title}}"/>
+    </div>
+    <section class="movie--info">
+        <h2 class="movie--title" >{{detail.title}}</h2>
+        <p class="movie--details" >{{ detail.vote_average}}/10 &#9642; {{ detail.release_date | date }}</p>
+        <p class="movie--overview" >{{ detail.overview }}</p>
+        <a href="{{detail.url}}" target="_blank" class="button--action button--action__play">Search for trailer</a>
+        
+        <a href="#!/" class="button--exit" ><span>Exit</span></a>
+    </section>
+</div>

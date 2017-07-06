@@ -1,0 +1,30 @@
+{
+  "name": "oncotv",
+  "description": "oncoTV is an Angular JS App helping you finding the perfect movie for tonight",
+  "main": "gulpfile.js",
+  "authors": [
+    "Camille Pourignaux"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "app",
+    "movie"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2"
+  }
+}

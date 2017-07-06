@@ -1,0 +1,14 @@
+<ul class="menu cf" ng-controller="menuController">
+    <li class="menu--item"><button id="toggle--menu" ng-click="openSidenav()">Menu</button>
+        <ul class="submenu" ng-show="sidenavOpen">
+            <li class="submenu--item">&#9762; Oops, nothing to show here ! This app is so small, it doesn't really need a menu. &#9762;</li>
+        </ul>
+    </li>
+    <li class="menu--item"><a href="#!/"><h1 class="oncotv--logo"><span>OncoTV</span></h1></a></li>
+    <li class="menu--item">
+        <div class="search">
+            <label id="toggle--search" for="movie-search"><span>Search</span></label>
+            <input type="text" ng-model="movies.search" class="search-query" id="movie-search" placeholder="Search for a movie...">
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,14 @@
+<div class="library">
+    <h2 class="view--title">Most Popular Tv Shows</h2>
+    <ul class="shows cf"> 
+        <li ng-repeat="movie in movies.data.results | filter:movies.search | limitTo :  number" class="shows--item">
+
+            <a href="#!/movie/{{movies.data.results.indexOf(movie)}}">
+                <img class="item--image" ng-src="https://image.tmdb.org/t/p/w185/{{ movie.poster_path}}" alt="{{ movie.title }}"/>
+                <h3 class="item--title">{{ movie.title }}</h3>
+                <p class="item--details">{{ movie.vote_average}}/10 &#9642; {{ movie.release_date | date }}</p>
+            </a>
+        </li>
+    </ul>
+    <button class="button--action button--action__more" ng-click="loadmore()" ng-hide="number >= movies.data.results.length">Load More</button>
+</div>

@@ -1,0 +1,56 @@
+/*DETAILS LAYOUT*/
+.image--container,
+.movie--info{
+    float: left;
+    box-sizing: border-box;
+}
+.image--container{
+    width: 40%;
+    transform: translate(-40px, -40px);
+}
+.movie--image{
+    border-radius: 7px;
+    max-width: 100%;
+    animation: appearOpacity .5s ease-in-out forwards;
+    opacity: 0;
+}
+.movie--info{
+    padding:40px 40px 40px 0;
+    position: relative;
+    width: 60%;
+}
+.movie--title{
+    font-size: 2em;
+    line-height: 1.2em;
+    color: $textColor;
+    animation: appearMove .5s .2s ease-in-out forwards;
+    opacity: 0;
+}
+.movie--details{
+    color: $secColor;
+    animation: appearMove .5s .4s ease-in-out forwards;
+    opacity: 0;
+}
+.movie--overview{
+    animation: appearMove .5s .6s ease-in-out forwards;    
+    opacity: 0;
+}
+.button--action__play{
+    display: inline-block;
+    animation: appearMove .5s 1s ease-in-out forwards;
+    opacity: 0;
+}
+.button--action__play:before{
+    background-image: url("../img/play-icon.svg");
+}
+.button--exit{
+    @extend #toggle--menu;
+    background-image: url(../img/close-icon.svg);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    animation: appearOpacity .5s ease-in-out;
+    span{
+        visibility: hidden;
+    }
+}
