@@ -1,0 +1,48 @@
+/* BASIC LAYOUTS */
+body{
+    min-height: 100vh;
+    background: #ffca1d;
+    background: -moz-radial-gradient(top, ellipse cover,  #ffca1d 0%, #d37f72 100%);
+    background: -webkit-radial-gradient(top, ellipse cover,  #ffca1d 0%,#d37f72 100%);
+    background: radial-gradient(ellipse at top,  #ffca1d 0%,#d37f72 100%);
+    font-family: $bodyFont;
+}
+.container{
+    background: $backgroundColor;
+    border-radius: 20px;
+    width: 60%;
+    margin: 7em auto;
+    min-height: 20vh;
+    animation: appearOpacity .4s ease;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+.button--action{
+    position: relative;
+    display: block;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 30px;
+    background: $mainColor;
+    padding: 10px 15px 10px 45px;
+    margin: 2em auto;
+    font-weight: 500;
+}
+.button--action:before{
+    content:"";
+    display: block;
+    height:1em;
+    width: 1em;
+    position: absolute;
+    left: 20px;
+    top: 14px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* SPECIFIC LAYOUTS */
+@import "modules/topbar";
+@import "modules/library";

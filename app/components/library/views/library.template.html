@@ -1,0 +1,20 @@
+<div class="library">
+    <h2 class="view--title" ng-hide="selected != null">Most Popular Tv Shows</h2>
+    <ul class="shows cf" ng-init="selected = null"> 
+        <li ng-repeat="movie in movies | filter:movies.search | limitTo :  number" class="shows--item cf" ng-class="{'active': selected == $id}"  ng-hide="selected != null && selected != $id">
+            <div class="cf" ng-click="setSelected($id)">
+            <div class="image--container">
+                <img class="item--image" ng-src="{{movie.cover}}" alt="{{ movie.title }}"/>
+            </div>
+            <section class="movie--info">
+                <h3 class="item--title">{{ movie.title }}</h3>
+                <p class="item--details">{{ movie.duration}} min &#9642; {{ movie.pubdate }}</p>
+                <p class="movie--overview" ng-show="selected == $id">{{ movie.overview }}</p>
+                <a href="{{movie.trailer}}" target="_blank" class="button--action button--action__play" ng-show="selected == $id">Play Movie</a>
+            </section>
+            </div>
+                <button class="button--exit" ng-click="closeSelected()" ng-show="selected == $id"><span>Exit</span></button>
+        </li>
+    </ul>
+    <button class="button--action button--action__more" ng-click="loadmore()" ng-hide="number >= movies.length || selected != null">Load More</button>
+</div>
